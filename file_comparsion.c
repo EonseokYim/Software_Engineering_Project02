@@ -54,12 +54,28 @@ void filetime2(void) {
 
 //두 개의 파일 크기를 비교하는 함수
 void sizecmp(void) {
-
+    
+    int cmp=(int)stat1.st_size-(int)stat2.st_size;
+    printf("size compare\n");
+    if(stat1.st_size > stat2.st_size){  printf("text1 is bigger\n");}
+    if(stat1.st_size == stat2.st_size){  printf("sizes are equal\n");}
+    if(stat1.st_size < stat2.st_size){  printf("text2 is bigger\n");}
+    return ;
 }
+
 
 //두 개의 파일 블락 수를 비교하는 함수
 void blockcmp(void) {
-
+    int cmp=0;
+    
+    cmp = (int)stat1.st_blocks - (int)stat2.st_blocks;
+    
+    printf("block compare\n");
+   // printf("%d /// %d\n",(int)stat1.st_blocks , (int)stat2.st_blocks );
+    if(cmp>0){  printf("text1 is bigger\n");}
+    if(cmp==0){  printf("block are equal\n");}
+    if(cmp<0){  printf("text2 is bigger");}
+    return ;
 }
 
 //두 개의 파일 수정 날짜를 비교하는 함수

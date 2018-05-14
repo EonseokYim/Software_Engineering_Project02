@@ -30,7 +30,7 @@ int main(void) {
 
 //파일 1의 정보를 가져오는 함수 작성
 void filestat1(void) {
-
+    int a = 0;
 }
 
 //파일 2의 정보를 가져오는 함수 작성

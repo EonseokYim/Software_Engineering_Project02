@@ -56,7 +56,7 @@ void sizecmp(void) {
     if(stat1.st_size > stat2.st_size){  printf("text1 is bigger\n");}
     if(stat1.st_size == stat2.st_size){  printf("sizes are equal\n");}
     if(stat1.st_size < stat2.st_size){  printf("text2 is bigger\n");}
-    return ;
+    return;
 }
 
 

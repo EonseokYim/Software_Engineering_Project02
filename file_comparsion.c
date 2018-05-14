@@ -64,10 +64,70 @@ void blockcmp(void) {
 
 //두 개의 파일 수정 날짜를 비교하는 함수
 void datecmp(void) {
-
+    filetime1();
+    int mon1 = time1 -> tm_mon+1;
+    int day1 = time1 -> tm_mday;
+    filetime2();
+    int mon2 = time2 -> tm_mon+1;
+    int day2 = time2 -> tm_mday;
+    printf("date compare\n");
+    if(mon1>mon2)
+    {
+        printf("text2 is early\n");
+    }
+    else if (mon1<mon2)
+    {
+        printf("text1 is early\n");
+    }
+    else
+    {
+        if(day1>day2)
+        {
+            printf("text2 is early\n");
+        }
+        else if(day1<day2)
+        {
+            printf("text1 is early\n");
+        }
+        else
+        {
+            printf("same time\n");
+        }
+    }
+    return;
 }
 
 //두 개의 파일 수정 시간을 비교하는 함수
 void timecmp(void) {
-
+    filetime1();
+    int hour1 = time1->tm_hour;
+    int min1 = time1->tm_min;
+    filetime2();
+    int hour2 = time2->tm_hour;
+    int min2 = time2->tm_min;
+    printf("time compare\n");
+    if(hour1>hour2)
+    {
+        printf("text2 is early\n");
+    }
+    else if (hour1<hour2)
+    {
+        printf("text1 is early\n");
+    }
+    else
+    {
+        if(min1>min2)
+        {
+            printf("text2 is early\n");
+        }
+        else if(min1<min2)
+        {
+            printf("text1 is early\n");
+        }
+        else
+        {
+            printf("same time\n");
+        }
+    }
+    return;
 }

@@ -30,23 +30,26 @@ int main(void) {
 
 //파일 1의 정보를 가져오는 함수 작성
 void filestat1(void) {
-    int a = 0;
-    int b = 0;
+    if (stat("text1", &stat1) != 0)
+        perror("stat() error");
 }
 
 //파일 2의 정보를 가져오는 함수 작성
 void filestat2(void) {
-
+    if (stat("text2", &stat2) != 0)
+        perror("stat() error");
 }
 
 //파일1의 시간정보를 가져오는 함수
 void filetime1(void) {
-
+    time1=localtime(&stat1.st_mtime);
+    return;
 }
 
 //파일2의 시간정보를 가져오는 함수
 void filetime2(void) {
-
+    time2=localtime(&stat2.st_mtime);
+    return;
 }
 
 //두 개의 파일 크기를 비교하는 함수

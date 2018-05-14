@@ -19,10 +19,10 @@ void timecmp(void);
 int main(void) {
     filestat1();
     filestat2();
-    tiletime1();
+    filetime1();
     filetime2();
     sizecmp();
-    blcokcmp();
+    blockcmp();
     datecmp();
     timecmp();
     return 0;
